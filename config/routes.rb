@@ -4,4 +4,14 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+   get 'pages/home'
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+
+  resources :pages, only: %i[home] do
+    resources :food, only: %i[index] 
+  end
+
+  # Defines the root path route ("/")
+  root "pages#home"
 end
