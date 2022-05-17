@@ -1,4 +1,6 @@
 class PublicRecipesController < ApplicationController
+  layout 'application2'
+
   def index
     @recipes = Recipe.where(public: true).order(id: 'DESC')
   end

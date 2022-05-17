@@ -1,5 +1,12 @@
-<div>
-  <h2><%= link_to public_recipe_show_path(recipe) do %>
-            <h4><%= recipe.name %></h4>
-          <% end %>
+<div class="col-xl-4 col-lg-4 col-md-6">
+  <div class="single_recepie text-center">
+    <div class="recepie_thumb">
+      <img src="/img/recepie/recpie_1.png" alt="recipe" />
+    </div>
+    <h3><%= recipe.name %></h3>
+    <span>By: <%= recipe.user.name %></span>
+    <span>Total food items:  <%= recipe.recipe_foods.length %></span>
+    <span>Total price: #todo</span>
+    <%= link_to 'View Full Recipe', public_recipe_show_path(recipe), class: "line_btn" %>
+  </div>
 </div>
