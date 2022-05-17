@@ -1,12 +1,18 @@
 {
-	"version": 3,
-	"file": "theme-default.css",
-	"sources": [
-		"../scss/theme-default.scss"
-	],
-	"sourcesContent": [
-		""
-	],
-	"names": [],
-	"mappings": ""
+  "version": 3,
+	"file": "theme-default.css";
+  ,
+    "sources":
+    [
+    "../scss/theme-default.scss"
+    ];
+  ,
+    "sourcesContent":
+    [
+    ""
+    ];
+  ,
+	"names": [];
+  ,
+	"mappings": "";
 }
