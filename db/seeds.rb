@@ -15,3 +15,14 @@ r2 = Recipe.create(name: 'lasagne', preparation_time: '2', cooking_time: '1', de
 
 r3 = Recipe.create(name: 'macaronni', preparation_time: '2', cooking_time: '1', description: 'macaronni', public: false, user: u)
 
+food = Food.create(name: 'pasta', user: @user)
+RecipeFood.create(quantity: 2, recipe: r2, food: food)
+
+food = Food.create(name: 'salsa', user: @user)
+RecipeFood.create(quantity: 2, recipe: r2, food: food)
+
+food = Food.create(name: 'cheeze', user: @user)
+RecipeFood.create(quantity: 2, recipe: r2, food: food)
+
+
+
