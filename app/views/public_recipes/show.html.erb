@@ -1,3 +1,15 @@
 <div>
   <h2><%= @recipe.name %></h2>
+  <div>Preparation time <%= @recipe.preparation_time %></div>
+  <div>Preparation time <%= @recipe.cooking_time %></div>
+  <div>Step go here...</div>
+  <div><button>Generate shopping list</button></div>
+  <div><button>Add ingredient</button></div>
+
+  <h3>List of ingredient </h3>
+
+    <% @recipe.recipe_foods.each do |recipe_food| %>
+       <div><%= recipe_food.food.name %> <%= recipe_food.quantity %>  $100 ?? Modify?? Remove ?? </div>
+    <% end %>
+
 </div>
