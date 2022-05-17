@@ -8,9 +8,8 @@ RSpec.describe Recipe, type: :model do
   end
 
   after(:each) do
-    Recipe.destroy_all
-
     User.destroy_all
+    Recipe.destroy_all
   end
 
   it 'should create a recipe' do
