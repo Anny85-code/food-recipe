@@ -54,8 +54,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_17_104510) do
 
   create_table "recipes", force: :cascade do |t|
     t.string "name"
-    t.time "preparation_time"
-    t.time "cooking_time"
+    t.string "preparation_time"
+    t.string "cooking_time"
     t.text "description"
     t.boolean "public"
     t.bigint "user_id", null: false
