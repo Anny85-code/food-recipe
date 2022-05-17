@@ -1,5 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,700,900|Satisfy&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,700,900|Satisfy&display=swap");
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
+/* stylelint-disable csstree/validator */
+/* stylelint-disable declaration-block-no-duplicate-properties */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable no-descending-specificity */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,700,900|Satisfy&display=swap');
 
 /* line 1, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_extend.scss */
 .boxed-btn3-text:hover {
@@ -35,7 +39,7 @@
 
 /* line 5, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/theme-default.scss */
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -75,7 +79,7 @@ a:focus {
 a:focus,
 a:hover,
 .portfolio-cat a:hover,
-.footer -menu li a:hover {
+.footer li a:hover {
   text-decoration: none;
 }
 
@@ -92,7 +96,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Satisfy", cursive;
+  font-family: 'Satisfy', cursive;
   color: #000;
 }
 
@@ -125,7 +129,7 @@ p {
   line-height: 28px;
   margin-bottom: 26px;
   margin-bottom: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* line 69, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/theme-default.scss */
@@ -234,7 +238,7 @@ h3 {
 /* line 146, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/theme-default.scss */
 .overlay::before {
   position: absolute;
-  content: "";
+  content: '';
   background-color: #1f1f1f;
   top: 0;
   left: 0;
@@ -253,7 +257,7 @@ h3 {
 /* line 162, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/theme-default.scss */
 .overlay2::before {
   position: absolute;
-  content: "";
+  content: '';
   background-color: #2c2c2c;
   top: 0;
   left: 0;
@@ -291,7 +295,7 @@ h3 {
 /* line 195, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/theme-default.scss */
 .bradcam_overlay::before {
   position: absolute;
-  content: "";
+  content: '';
 
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5db2ff+0,7db9e8+100&1+24,0+96 */
   background: -moz-linear-gradient(left, #5db2ff 0%, #65b4f9 24%, rgba(124, 185, 233, 0) 96%, rgba(125, 185, 232, 0) 100%);
@@ -438,7 +442,7 @@ h3 {
   color: #131313;
   display: inline-block;
   padding: 18px 44px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 400;
   border: 0;
@@ -469,7 +473,7 @@ h3 {
 
 /* line 29, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_btn.scss */
 .boxed-btn3 {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 13px;
   font-weight: 500;
   color: #fff;
@@ -477,10 +481,10 @@ h3 {
   padding: 14px 41px;
   text-align: center;
   border: none;
+  background: #ffc000;
   background-size: 100% 100%;
   border-radius: 50px;
   background-size: 101% 100%;
-  background: #ffc000;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
@@ -503,7 +507,7 @@ h3 {
 
 /* line 59, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_btn.scss */
 .boxed-btn3-text {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 15px;
   font-weight: 500;
   color: #fff;
@@ -538,7 +542,7 @@ h3 {
   color: #fff;
   display: inline-block;
   padding: 14px 27px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 500;
   border: 0;
@@ -577,7 +581,7 @@ h3 {
   color: #fff;
   display: inline-block;
   padding: 13px 27px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 400;
   border: 0;
@@ -623,7 +627,7 @@ h3 {
   color: #ffc000 !important;
   display: inline-block;
   padding: 14px 31px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 400;
   border: 0;
@@ -664,7 +668,7 @@ h3 {
   color: #fff;
   display: inline-block;
   padding: 18px 24px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 400;
   border: 0;
@@ -698,7 +702,7 @@ h3 {
 /* line 204, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_btn.scss */
 .line-button::before {
   position: absolute;
-  content: "";
+  content: '';
   background: #919191;
   width: 100%;
   height: 1px;
@@ -725,7 +729,7 @@ h3 {
   text-transform: capitalize;
   padding: 13px 34px;
   font-weight: 500;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px;
@@ -848,16 +852,15 @@ h3 {
 .slicknav_menu .slicknav_nav {
   background: #fff;
   float: right;
-  margin-top: 0;
   padding: 0;
   width: 95%;
   padding: 0;
   border-radius: 0;
+  margin: auto;
   margin-top: 5px;
   position: absolute;
   left: 0;
   right: 0;
-  margin: auto;
   top: 11px;
 }
 
@@ -1157,7 +1160,7 @@ h3 {
   font-weight: 500;
   display: inline-block;
   padding: 0 0 0 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   position: relative;
   text-transform: capitalize;
 }
@@ -1393,8 +1396,8 @@ h3 {
 @media (max-width: 767px) {
   /* line 325, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_header.scss */
   .header-area .header-top_area .short_contact_list ul li a {
-    margin-left: 0;
     margin: 0 5px;
+    margin-left: 0;
   }
 }
 
@@ -1537,7 +1540,7 @@ h3 {
 /* line 56, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_slider.scss */
 .slider_area .single_slider .slider_text h3 {
   color: #fff;
-  font-family: "Satisfy", cursive;
+  font-family: 'Satisfy', cursive;
   font-size: 100px;
   text-transform: capitalize;
 }
@@ -2160,9 +2163,8 @@ h3 {
   /* line 51, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_case_details.scss */
   .case_details_area .details_main_wrap .single_details ul li {
     display: block;
-    margin-right: 4px;
-    margin: 0;
     margin: 10px 0;
+    margin-right: 4px;
     text-align: center;
   }
 }
@@ -2366,7 +2368,7 @@ h3 {
 /* line 103, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_gallery.scss */
 .portfolio_details_area .portfolio_details_content p {
   font-size: 16px;
-  font-family: "Satisfy", cursive;
+  font-family: 'Satisfy', cursive;
   color: #727272;
   line-height: 28px;
 }
@@ -2397,11 +2399,11 @@ h3 {
 
 /* line 1, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_footer.scss */
 .footer {
+  background: #000;
   background-repeat: no-repeat;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background: #000;
 }
 
 /* line 7, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_footer.scss */
@@ -2889,7 +2891,7 @@ h3 {
   cursor: pointer;
   display: block;
   float: left;
-  font-family: "Satisfy", cursive;
+  font-family: 'Satisfy', cursive;
   font-weight: normal;
   width: 100% !important;
 
@@ -2918,7 +2920,7 @@ h3 {
 
 /* line 153, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_bradcam.scss */
 .popup_box .nice-select::after {
-  content: "\f0d7";
+  content: '\f0d7';
   display: block;
   height: 5px;
   margin-top: -5px;
@@ -3027,7 +3029,7 @@ h3 {
   padding-right: 0.5rem;
   padding-left: 0.5rem;
   color: #727272;
-  content: "/";
+  content: '/';
 }
 
 /* line 244, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_bradcam.scss */
@@ -4016,7 +4018,7 @@ h3 {
 
 /* line 142, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_download.scss */
 .download_app_area .download_text .download_android_apple a .download_link .store h5 {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 20px;
@@ -4024,7 +4026,7 @@ h3 {
 
 /* line 148, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_download.scss */
 .download_app_area .download_text .download_android_apple a .download_link .store p {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 12px;
   font-weight: 300;
   color: #888;
@@ -5760,7 +5762,7 @@ h6 {
 
 /* line 459, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_elements.scss */
 .unordered-list li::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 14px;
   height: 14px;
@@ -6009,7 +6011,7 @@ h6 {
 
 /* line 663, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_elements.scss */
 .primary-switch input + label::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
@@ -6028,7 +6030,7 @@ h6 {
 
 /* line 677, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_elements.scss */
 .primary-switch input + label::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 1px;
   left: 1px;
@@ -6089,7 +6091,7 @@ h6 {
 
 /* line 728, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_elements.scss */
 .confirm-switch input + label::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
@@ -6108,7 +6110,7 @@ h6 {
 
 /* line 742, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_elements.scss */
 .confirm-switch input + label::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 1px;
   left: 1px;
@@ -6861,7 +6863,7 @@ h6 {
 
 /* line 307, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_blog.scss */
 .causes_item .causes_img .c_parcent span::before {
-  content: "75%";
+  content: '75%';
   position: absolute;
   right: -10px;
   bottom: 0;
@@ -7126,7 +7128,7 @@ h6 {
 
 /* line 577, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_blog.scss */
 .blog-info-link li::after {
-  content: "|";
+  content: '|';
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -7138,7 +7140,7 @@ h6 {
 
 /* line 588, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_blog.scss */
 .blog-info-link::after {
-  content: "";
+  content: '';
   display: block;
   clear: both;
   display: table;
@@ -7208,7 +7210,7 @@ h6 {
 
 /* line 652, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_blog.scss */
 .blog_right_sidebar .widget_title::after {
-  content: "";
+  content: '';
   display: block;
   padding-top: 15px;
   border-bottom: 1px solid #f0e9ff;
@@ -8088,7 +8090,7 @@ h6 {
 /* line 86, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_blog_part.scss */
 .blog_part .single-home-blog .card .dot::after {
   position: absolute;
-  content: "";
+  content: '';
   width: 10px;
   height: 10px;
   top: 5px;
