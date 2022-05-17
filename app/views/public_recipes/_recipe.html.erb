@@ -6,7 +6,7 @@
     <h3><%= recipe.name %></h3>
     <span>By: <%= recipe.user.name %></span>
     <span>Total food items:  <%= recipe.recipe_foods.length %></span>
-    <span>Total price: #todo</span>
+    <span>Total price: <%= recipe.total_price %> </span>
     <%= link_to 'View Full Recipe', public_recipe_show_path(recipe), class: "line_btn" %>
   </div>
 </div>
