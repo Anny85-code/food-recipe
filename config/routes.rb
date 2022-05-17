@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'public_recipes/index'
+  get 'public_recipes/show/:id', to: 'public_recipes#show', as: 'public_recipe_show'
   get 'inventory_food/index'
   get 'inventory/index'
   devise_for :users, :controllers => { registrations: 'users/registrations' }
