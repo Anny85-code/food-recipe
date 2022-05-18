@@ -29,3 +29,9 @@ f2 = Food.create(name: 'salsa', user: u, measuring_unit: 500, price: 5 )
 
 RecipeFood.create(quantity: 2, recipe: r3, food: f1)
 RecipeFood.create(quantity: 2, recipe: r3, food: f2)
+
+inv =  Inventory.create(name: myinv, user_id: 4)
+
+if1 = InventoryFood.create(quantity: 1, inventory: inv, food_id: 6)
+if2 = InventoryFood.create(quantity: 2, inventory: inv, food_id: 5)
+if3 = InventoryFood.create(quantity: 0, inventory: inv, food_id: 4)
