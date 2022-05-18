@@ -1,14 +1,9 @@
-<div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_recepie text-center">
-                        <div class="recepie_thumb">
-                            <img src="/img/recepie/recpie_1.png" alt="">
-                        </div>
-                        <h3><%= food.name %></h3>
-                        <span>Appetizer</span>
-                        <p>Time Needs: 30 Mins</p>
-                        <a href="#" class="line_btn">View Full Recipe</a>
-                    </div>
-                </div>
 
-
+    <tr>
+      <%# <th scope="row">1</th> %>
+      <td> <h3><%= food.name %></h3></td>
+      <td><%= food.measuring_unit %></h3></td>
+      <td><h3><%= food.price %></h3></td>
+      <td><h3><%= link_to "Delete", inventory_food_index_path(food_id: food.user_id, id: food.id ), data: {confirm: "Are you sure you want to delete: #{food.name}?",}, method: :delete  %></h3></td>
+    </tr>
 
