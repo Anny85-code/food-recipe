@@ -1,5 +1,10 @@
-<h2>Log in</h2>
+<section class="contact-section section_padding">
+    <div class="container">
+      <div class="row">
 
+<div class="col-12">
+          <h2 class="contact-title">Log in</h2>
+        </div>
   <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
 <% end %>
@@ -8,18 +13,18 @@
 <% end %>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "current-password" %>
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="field">
+    <div class="field form-group">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
@@ -28,6 +33,9 @@
   <div class="actions">
     <%= f.submit "Log in" %>
   </div>
+    <%= render "users/shared/links" %>
+  </div>
+  </div>
+  </section>
 <% end %>
 
-<%= render "users/shared/links" %>
