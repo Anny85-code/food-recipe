@@ -5,6 +5,12 @@
           <h2 class="contact-title">Sign up</h2>
         </div>
         <div class="col-lg-8">
+        <% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name), class: 'form-contact contact_form') do |f| %>
               <%= render "users/shared/error_messages", resource: resource %>
 
