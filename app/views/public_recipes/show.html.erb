@@ -48,26 +48,35 @@
                 </div>
             </div>
 
+<br/>
             <div class="row">
-            <div class="container box_1170 border-top-generic">
-              <div class="button-group-area">
+<div class="progress-table-wrap">
                <h3 class="text-heading">List of ingredient </h3>
+					<div class="progress-table">
+						<div class="table-head">
+							<div class="serial">#</div>
+							<div class="country">Food</div>
+							<div class="visit">Quantity</div>
+							<div class="percentage">Value</div>
+							<div class="percentage"></div>
+							<div class="percentage"></div>
+						</div>
+                    <% @recipe.recipe_foods.each do |recipe_food| %>
 
-                <% @recipe.recipe_foods.each do |recipe_food| %>
-                <div>
-                          <span href="#" class="genric-btn default"><%= recipe_food.food.name %></span>
-                          <span class="genric-btn primary">Quantity : <%= recipe_food.quantity %></span>
-                          <span class="genric-btn success">Value: <%= recipe_food.food.price %>$</span>
-                          <a href="#" class="genric-btn info">Modify</a>
-                          <a href="#" class="genric-btn danger-border">Remove</a>
+						<div class="table-row">
+							<div class="serial"></div>
+							<div class="country"><%= recipe_food.food.name %></div>
+							<div class="visit"><%= recipe_food.quantity %></div>
+							<div class="percentage"><%= recipe_food.food.price %>$</div>
+							<div class="percentage"><a href="#" class="genric-btn success">Modify</a></div>
+                            <div class="percentage"><a href="#" class="genric-btn danger-border">Remove</a></div>
+						</div>
+						                     <% end %>
 
-                </div>
-                <% end %>
+					</div>
 
-               
-              </div>
-              
-		</div></div>
+				</div>
+        </div>
      <div class="row">
                 <div class="col-xl-12">
                     <div class="recepies_text">

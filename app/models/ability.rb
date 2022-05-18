@@ -2,10 +2,9 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-
     can :read, Recipe, public: true
 
-    can :manage, Recipe, user_id: user.id unless(user.nil?)
+    can :manage, Recipe, user_id: user.id unless user.nil?
 
     # Define abilities for the passed in user here. For example:
     #
