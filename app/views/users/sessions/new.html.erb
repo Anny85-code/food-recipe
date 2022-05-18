@@ -1,5 +1,10 @@
-<h2>Log in</h2>
-
+<section class="contact-section section_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="contact-title">Log in</h2>
+        </div>
+        <div class="col-lg-8">
   <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
 <% end %>
@@ -8,26 +13,63 @@
 <% end %>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
+<div class="row">
+<div class="col-12">
+  <div class="form-group">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+  </div>
+  </div>
+ <div class="col-12">
+  <div class="form-group">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "current-password", class: 'form-control' %>
+  </div>
   </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="field">
+  <div class="col-12">
+    <div class="form-group">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
+    </div>
+    </div>
   <% end %>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+<div class="form-group mt-3">
+                <%= f.submit "Log in", class: "button button-contactForm btn_4 boxed-btn" %>
+</div>
+  <%= render "users/shared/links" %>
+    </div>
+
+ <div class="col-lg-4">
+          <div class="media contact-info">
+            <span class="contact-info__icon"><i class="ti-home"></i></span>
+            <div class="media-body">
+              <h3>Buttonwood, California.</h3>
+              <p>Rosemead, CA 91770</p>
+            </div>
+          </div>
+          <div class="media contact-info">
+            <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+            <div class="media-body">
+              <h3>00 (440) 9865 562</h3>
+              <p>Mon to Fri 9am to 6pm</p>
+            </div>
+          </div>
+          <div class="media contact-info">
+            <span class="contact-info__icon"><i class="ti-email"></i></span>
+            <div class="media-body">
+              <h3>support@colorlib.com</h3>
+              <p>Send us your query anytime!</p>
+            </div>
+          </div>
+        </div>
+
   </div>
+  </div>
+  </section>
 <% end %>
 
-<%= render "users/shared/links" %>
