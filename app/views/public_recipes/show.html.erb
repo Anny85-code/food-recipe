@@ -24,7 +24,10 @@
                                 <li><p><strong>Cooking time</strong> : <%= @recipe.cooking_time %> </p></li>
                                 <li><p><strong>Tags</strong> :  Dinner, Main, Chicken, Dragon, Phoenix </p></li>
                                 <li><p><button>Generate shopping list</button></p></li>
-                                <li><p><button>Add ingredient</button></p></li>
+
+                                 <% if can? :manage, @recipe %>
+                                          <li><p><button>Add ingredient</button></p></li>
+                                <% end %> 
 
                             </ul>
                         </div>
