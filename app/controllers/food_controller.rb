@@ -7,6 +7,24 @@ class FoodController < ApplicationController
     @food = Food.find(params[:id])
   end
 
+def new
+    @food = Food.new
+  end
+
+  def create
+    @food = Food.new(food_params)
+
+    respond_to do |format|
+      if @food.save
+        format.html { redirect_to page_food_index_path(id: @food.page_id) }
+        flash[:notice] = 'You have successfully created food.'
+      else
+        format.html { render :new, alert: 'An error has occurred while creating food' }
+      end
+    end
+  end
+
+
   def destroy
     @post = Food.find(params[:id])
     # user = User.find(@food.user_id)
@@ -15,5 +33,9 @@ class FoodController < ApplicationController
     respond_to do |format|
       format.html { redirect_to user_path(id: @food.user_id), notice: 'food was removed.' }
     end
+  end
+
+  def food_params
+    params.require(:food).permit(:name)
   end
 end
