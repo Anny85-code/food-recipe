@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :recipes
   get 'public_recipes', to: 'public_recipes#index', as: 'public_recipes'
   get 'recipes/:id', to: 'public_recipes#show', as: 'public_recipe_show'
   get 'inventory_food/index'
