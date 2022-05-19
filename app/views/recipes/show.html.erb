@@ -1,7 +1,14 @@
 <p style="color: green"><%= notice %></p>
+<div class="border border-dark d-flex justify-content-between m-2 p-5">
 <%# <%= render @recipe %> 
-<%= @recipe.name %>
-<div>
-  <%= link_to "Back to recipes", recipes_path %>
+<div class="d-flex flex-column">
+  <%= @recipe.name %>
   <%= button_to "Destroy this recipe", @recipe, method: :delete %>
+  </div>
+    <div>
+    <%= @recipe.description %>
+    </div>
 </div>
+<%# <div>
+  <%= link_to "Back to recipes", recipes_path %>
+<%# </div>  %>
