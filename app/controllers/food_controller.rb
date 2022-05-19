@@ -26,7 +26,7 @@ def new
 
 
   def destroy
-    @post = Food.find(params[:id])
+    @food = Food.find(params[:id])
     # user = User.find(@food.user_id)
     @food.destroy if @food.present?
     food.save
