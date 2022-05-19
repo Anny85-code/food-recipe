@@ -13,6 +13,7 @@ def new
 
   def create
     @food = Food.new(food_params)
+    @food.user_id
 
     respond_to do |format|
       if @food.save
