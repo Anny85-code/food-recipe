@@ -3,5 +3,5 @@
 <div>
   <%= link_to "Back to recipes", recipes_path %>
   <%= button_to "Destroy this recipe", @recipe, method: :delete %>
-  <%= link_to "shopping list", shopping_index_path+'?id='+@recipe.id.to_s %>
+  <%= link_to "shopping list", shop_path+'?id='+@recipe.id.to_s %>
 </div>

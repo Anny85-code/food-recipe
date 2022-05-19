@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'shopping/index'
+  get 'shopping', to: 'shopping#index', as: 'shop'
   resources :recipes
   get 'public_recipes', to: 'public_recipes#index', as: 'public_recipes'
   get 'recipes/:id', to: 'public_recipes#show', as: 'public_recipe_show'
