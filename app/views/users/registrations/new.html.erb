@@ -1,36 +1,75 @@
-
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "users/shared/error_messages", resource: resource %>
-
-<div class="field">
-  <%= f.label :name %><br />
-  <%= f.text_field :name %>
-</div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<section class="contact-section section_padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="contact-title">Sign up</h2>
+      </div>
+      <div class="col-lg-8">
+        <% if notice %>
+          <p class="alert alert-success"><%= notice %></p>
+        <% end %>
+        <% if alert %>
+          <p class="alert alert-danger"><%= alert %></p>
+        <% end %>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), class: 'form-contact contact_form') do |f| %>
+          <%= render "users/shared/error_messages", resource: resource %>
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <%= f.label :name %><br />
+                <%= f.text_field :name, class: 'form-control' %>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group">
+                <%= f.label :email %><br />
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group">
+                <%= f.label :password %>
+                <% if @minimum_password_length %>
+                  <em>(<%= @minimum_password_length %> characters minimum)</em>
+                <% end %><br />
+                <%= f.password_field :password, autocomplete: "new-password", class: 'form-control' %>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group">
+                <%= f.label :password_confirmation %><br />
+                <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>                </div>
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <%= f.submit "Sign up", class: "button button-contactForm btn_4 boxed-btn" %>
+          </div>
+          <%= render "users/shared/links" %>
+        <% end %>
+      </div>
+      <div class="col-lg-4">
+        <div class="media contact-info">
+          <span class="contact-info__icon"><i class="ti-home"></i></span>
+          <div class="media-body">
+            <h3>Buttonwood, California.</h3>
+            <p>Rosemead, CA 91770</p>
+          </div>
+        </div>
+        <div class="media contact-info">
+          <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+          <div class="media-body">
+            <h3>00 (440) 9865 562</h3>
+            <p>Mon to Fri 9am to 6pm</p>
+          </div>
+        </div>
+        <div class="media contact-info">
+          <span class="contact-info__icon"><i class="ti-email"></i></span>
+          <div class="media-body">
+            <h3>support@colorlib.com</h3>
+            <p>Send us your query anytime!</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-
-<% end %>
-
-<%= render "users/shared/links" %>
+</section>
