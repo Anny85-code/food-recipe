@@ -630,12 +630,11 @@ pre code {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
     width: 100%;
-    /* -ms-flex-wrap: wrap; */
-    /* flex-wrap: wrap; */
-    /* margin-right: -15px;
-    margin-left: -15px */
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap; 
+    margin-right: -15px;
+    margin-left: -15px
 }
 
 .no-gutters {
