@@ -29,9 +29,9 @@ def new
 
   def destroy
     @food = Food.find(params[:id])
-    # user = User.find(@food.user_id)
+    user = User.find(@food.user_id)
     @food.destroy if @food.present?
-    food.save
+    user.save
     respond_to do |format|
       format.html { redirect_to user_path(id: @food.user_id), notice: 'food was removed.' }
     end
