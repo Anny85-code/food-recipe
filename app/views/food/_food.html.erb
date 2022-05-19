@@ -1,8 +1,13 @@
-
-    <tr>
-        <td> <h3><%= food.name %></h3></td>
-        <td><%= food.measuring_unit %></h3></td>
-        <td><h3><%= food.price %></h3></td>
-        <td><h3><%= link_to "Delete", food_path(id: food.id ), data: {confirm: "Are you sure you want to delete: #{food.name}?",}, method: :delete  %></h3></td>
-    </tr>
-
+<tr>
+  <td>
+    <h3><%= food.name %></h3>
+  </td>
+  <td><%= food.measuring_unit %></h3>
+</td>
+<td>
+  <h3><%= food.price %></h3>
+</td>
+<td>
+  <%= button_to "Delete", food, method: :delete %>
+</td>
+</tr>

@@ -4,6 +4,8 @@
     <%= form_with model: @food, url: food_index_path, class: "card left" do |form| %>
       <%= form.label :name %> <br>
       <%= form.text_field :name %> <br>
+      <%= form.text_field :measuring_unit %> <br>
+      <%= form.text_field :price %> <br>
       <%= form.submit "Submit", class: "btn btn-info" %>
     <% end %>
   </div>
