@@ -17,14 +17,14 @@
               <div class="percentage"></div>
               <div class="percentage"></div>
             </div>
-            <div>total <%= @total %> 
+            <div>total <%= @total %>
               <div>
-                <% @foods.each do |food| %>
+                <% @shop.each do |s| %>
                   <div class="table-row">
                     <div class="serial"></div>
-                    <div class="country"><%= food.name %></div>
-                    <div class="visit"><%=  food.measuring_unit%></div>
-                    <div class="percentage"><%=  food.price %>$</div>
+                    <div class="country"><%= s[:food].name %></div>
+                    <div class="visit"><%=  s[:food].measuring_unit%></div>
+                    <div class="percentage"><%= s[:price] %>$</div>
                     <div class="percentage"><a href="#" class="genric-btn success">Modify</a></div>
                     <div class="percentage"><a href="#" class="genric-btn danger-border">Remove</a></div>
                   </div>
