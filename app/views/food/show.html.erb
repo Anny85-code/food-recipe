@@ -1,20 +1,19 @@
-
-<div class="card m-5 p-3">
-<div class="d-flex justify-content-between">
-<ul class="d-flex flex-direction-column">
-<div class="d-flex justify-content-between">
-<h3>Food</h3>
-<h3>Measurement Unit</h3>
-<h3>Unit Price</h3>
-<h3>Action</h3>
-</div>
-<li><div><h3><%= @food.name %></h3></div>
-
-<div><h3><%= @food.measuring_unit %></h3></div>
-<div><h3><%= @food.price %></h3></div>
-<div><h3><%= link_to "Delete", inventory_food_index_path(food_id: @food.user_id, id: @food.id ), data: {confirm: "Are you sure you want to delete: #{@food.name}?",}, method: :delete  %></h3></div>
-
-</li>
-</ul>
-</div>
-</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col"><h2>Food</h2></th>
+      <th scope="col"><h2>Measurement Unit</h2></th>
+      <th scope="col"><h2>Unit Price</h2></th>
+      <th scope="col"><h2>Action</h2></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <%# <th scope="row">1</th> %>
+      <td> <h3><%= @food.name %></h3></td>
+      <td><%= @food.measuring_unit %></h3></td>
+      <td><h3><%= @food.price %></h3></td>
+      <td><h3><%= link_to "Delete", food_path(id: @food.id ), data: {confirm: "Are you sure you want to delete: #{@food.name}?",}, method: :delete  %></h3></td>
+    </tr>
+  </tbody>
+</table>
