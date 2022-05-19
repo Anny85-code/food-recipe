@@ -14,11 +14,11 @@ def new
 
   def create
     @food = Food.new(food_params)
-    @food.user_id
+    @food.user_id = current_user.id
 
     respond_to do |format|
       if @food.save
-        format.html { redirect_to page_food_index_path(id: @food.page_id) }
+        format.html { redirect_to food_index_path(id: @food.user_id) }
         flash[:notice] = 'You have successfully created food.'
       else
         format.html { render :new, alert: 'An error has occurred while creating food' }
