@@ -2,7 +2,7 @@ class PublicRecipesController < ApplicationController
   layout 'application2'
 
   def index
-    @recipes = Recipe.where(public: true).order(id: 'DESC')
+    @recipes = Recipe.includes(:recipe_foods).where(public: true).order(id: 'DESC')
   end
 
   def show

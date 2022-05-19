@@ -6532,7 +6532,7 @@ h6 {
 
 /* line 1089, ../../Arafath/CL/CL October/220 Tasty Recipes/HTML/scss/_elements.scss */
 .section-top-border {
-  padding: 50px 0;
+  /* padding: 50px 0; */
   border-top: 1px dotted #eee;
 }
 

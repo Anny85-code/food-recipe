@@ -1,14 +1,20 @@
 <p style="color: green"><%= notice %></p>
 <div class="border border-dark d-flex justify-content-between m-2 p-5">
-<%# <%= render @recipe %> 
-<div class="d-flex flex-column">
-  <h2 class="mb-1"><%= @recipe.name %></h2>
-  <%= button_to "Destroy this recipe", @recipe, method: :delete, class: "btn-info" %>
+  <%# <%= render @recipe %>
+  <div class="d-flex flex-column">
+    <h2 class="mb-1"><%= @recipe.name %></h2>
+    <%= button_to "Destroy this recipe", @recipe, method: :delete, class: "btn-info" %>
   </div>
-    <div>
+  <div>
     <h3><%= @recipe.description %></h3>
-    </div>
-</div>
-<div class="d-flex justify-content-center">
-  <h3><%= link_to "Back to recipes", recipes_path %></h3>
-</div> 
+  </div>
+  <%= render @recipe %>
+  <div>
+    <%= link_to "Back to recipes", recipes_path %>
+    <%= button_to "Destroy this recipe", @recipe, method: :delete %>
+    <%= link_to "shopping list", shop_path+'?id='+@recipe.id.to_s %>
+  </div>
+  <div class="d-flex justify-content-center">
+    <h3><%= link_to "Back to recipes", recipes_path %></h3>
+  </div>
+ 

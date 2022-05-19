@@ -1,0 +1,37 @@
+  <% content_for :page_title do %>
+  Shopping List
+<% end %>
+<% content_for :content do %>
+  <div class="blog_area section-padding">
+    <div class="container">
+      <br/>
+      <div class="row">
+        <div class="progress-table-wrap">
+          <h3 class="text-heading">Shopping List</h3>
+          <div class="progress-table">
+            <div class="table-head">
+              <div class="serial">#</div>
+              <div class="country">Food</div>
+              <div class="visit">Quantity</div>
+              <div class="percentage">Value</div>
+              <div class="percentage"></div>
+              <div class="percentage"></div>
+            </div>
+            <div>total <%= @total %>
+              <div>
+                <% @shop.each do |s| %>
+                  <div class="table-row">
+                    <div class="serial"></div>
+                    <div class="country"><%= s[:food].name %></div>
+                    <div class="visit"><%=  s[:food].measuring_unit%></div>
+                    <div class="percentage"><%= s[:price] %>$</div>
+                    <div class="percentage"><a href="#" class="genric-btn success">Modify</a></div>
+                    <div class="percentage"><a href="#" class="genric-btn danger-border">Remove</a></div>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
