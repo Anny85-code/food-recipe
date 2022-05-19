@@ -1,22 +1,17 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
-
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-     <title>RecipeApp</title>
+    <title>RecipeApp</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <!-- = stylesheet_link_tag "application", "data-turbo-track": "reload" % -->
     <!-- %= javascript_importmap_tags % -->
-
     <meta name="description" content="">
-
     <!-- <link rel="manifest" href="site.webmanifest"> -->
     <!-- Place favicon.ico in the root directory -->
-
     <!-- CSS here -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/owl.carousel.min.css">
@@ -31,16 +26,14 @@
     <link rel="stylesheet" href="/css/slicknav.css">
     <link rel="stylesheet" href="/css/style.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
-</head>
-
-<body>
-  <!--[if lte IE 9]>
+  </head>
+  <body>
+    <!--[if lte IE 9]>
       <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your
         experience and security.
       </p>
     <![endif]-->
-
     <!-- header-start -->
     <header>
       <div class="header-area">
@@ -56,21 +49,7 @@
               </div>
               <div class="col-xl-6 col-lg-7">
                 <div class="main-menu white_text d-none d-lg-block">
-                  <nav>
-                    <ul id="navigation">
-                                        <li><a href="index.html">home</a></li>
-                                        <li><a href="about.html">about</a></li>
-                                        <li><%= link_to 'Recipes', public_recipes_path %></li>
-                                        <% if current_user %>
-                                            <li><%= button_to "logout", destroy_user_session_path, method: :delete  %></li>
-                                        <% else %>
-                                        <li><%= link_to "Sign up", new_user_registration_path %></li>
-                                        <li><%= link_to "Sign in", new_user_session_path %></li>
-                                        <% end %>
-
-                                        <li><a href="contact.html">Contact</a></li>
-                                    </ul>
-                  </nav>
+                  <%= render partial: "/layouts/menu" %>
                 </div>
               </div>
               <div class="col-xl-3 col-lg-3 d-none d-lg-block">
@@ -89,7 +68,6 @@
       </div>
     </header>
     <!-- header-end -->
-
     <!-- bradcam_area  -->
     <div class="bradcam_area bradcam_bg_1">
       <div class="container">
@@ -103,9 +81,7 @@
       </div>
     </div>
     <!-- /bradcam_area  -->
-
-  <%= yield :content %>
-
+    <%= yield :content %>
     <!-- latest_trand     -->
     <div class="latest_trand_area">
       <div class="container">
@@ -114,14 +90,13 @@
             <div class="trand_info text-center">
               <p>Thousands of recipes are waiting to be watched</p>
               <h3>Discover latest trending recipes</h3>
-               <%= link_to 'View all Recipes', public_recipes_path, class: "boxed-btn3" %>
+              <%= link_to 'View all Recipes', public_recipes_path, class: "boxed-btn3" %>
             </div>
           </div>
         </div>
       </div>
     </div>
     <!--/ latest_trand     -->
-
     <!-- download_app_area -->
     <div class="download_app_area plus_padding">
       <div class="container">
@@ -168,7 +143,6 @@
       </div>
     </div>
     <!--/ download_app_area -->
-
     <!-- footer  -->
     <footer class="footer">
       <div class="footer_top">
@@ -297,15 +271,12 @@
     <script src="/js/jquery.magnific-popup.min.js"></script>
     <script src="/js/plugins.js"></script>
     <script src="/js/gijgo.min.js"></script>
-
     <!--contact js-->
     <script src="/js/contact.js"></script>
     <script src="/js/jquery.ajaxchimp.min.js"></script>
     <script src="/js/jquery.form.js"></script>
     <script src="/js/jquery.validate.min.js"></script>
     <script src="/js/mail-script.js"></script>
-
     <script src="/js/main.js"></script>
-</body>
-
+  </body>
 </html>
