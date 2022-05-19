@@ -1,5 +1,8 @@
 <div id="<%= dom_id recipe %>">
-  
+  <p>
+    <strong>Name:</strong>
+    <%= recipe.name %>
+  </p>
   <div class="d-flex justify-content-between p-5">
   <p>
     <strong>Preparation time:</strong>
@@ -8,13 +11,13 @@
   <p>
     <strong>Public:</strong>
     <%= recipe.public %>
-
     <label class="switch">
-  <input type="checkbox" checked>
-  <span class="slider round"></span>
-</label>
+    <input type="checkbox" checked>
+    <span class="slider round"></span>
+  </label>
   </p>
   </div>
+  <div class="text-left ml-5">
   <p>
     <strong>Cooking time:</strong>
     <%= recipe.cooking_time %>
@@ -23,5 +26,5 @@
     <strong>Description:</strong>
     <%= recipe.description %>
   </p>
- 
+ </div>
 </div>
