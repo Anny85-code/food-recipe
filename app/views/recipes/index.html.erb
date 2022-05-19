@@ -6,11 +6,11 @@
     <% @recipes.each do |recipe| %>
       <%= render recipe %>
       <div class="d-flex justify-content-between m-5">
-      <p>
+      
         <%= link_to "Show this recipe", recipe %>
-      </p>
-    <% end %>
-  <%= link_to "New recipe", new_recipe_path %>
+      
+        <% end %>
+      <%= link_to "New recipe", new_recipe_path %></>
   </div>
   <div class="d-flex justify-content-between m-5">
     <button type="button" class="btn btn-primary">Generate shopping list</button>

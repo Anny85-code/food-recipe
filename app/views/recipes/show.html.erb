@@ -2,13 +2,13 @@
 <div class="border border-dark d-flex justify-content-between m-2 p-5">
 <%# <%= render @recipe %> 
 <div class="d-flex flex-column">
-  <%= @recipe.name %>
-  <%= button_to "Destroy this recipe", @recipe, method: :delete %>
+  <h2 class="mb-1"><%= @recipe.name %></h2>
+  <%= button_to "Destroy this recipe", @recipe, method: :delete, class: "btn-info" %>
   </div>
     <div>
-    <%= @recipe.description %>
+    <h3><%= @recipe.description %></h3>
     </div>
 </div>
-<%# <div>
-  <%= link_to "Back to recipes", recipes_path %>
-<%# </div>  %>
+<div class="d-flex justify-content-center">
+  <h3><%= link_to "Back to recipes", recipes_path %></h3>
+</div> 
