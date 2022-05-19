@@ -1,6 +1,6 @@
 <div id="<%= dom_id recipe %>">
   
-  <div class="d-flex justify-content-between">
+  <div class="d-flex justify-content-between p-5">
   <p>
     <strong>Preparation time:</strong>
     <%= recipe.preparation_time %>
@@ -8,6 +8,11 @@
   <p>
     <strong>Public:</strong>
     <%= recipe.public %>
+
+    <label class="switch">
+  <input type="checkbox" checked>
+  <span class="slider round"></span>
+</label>
   </p>
   </div>
   <p>
