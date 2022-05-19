@@ -1,12 +1,15 @@
 <div id="<%= dom_id recipe %>">
-  <p>
-    <strong>Name:</strong>
-    <%= recipe.name %>
-  </p>
+  
+  <div class="d-flex justify-content-between">
   <p>
     <strong>Preparation time:</strong>
     <%= recipe.preparation_time %>
   </p>
+  <p>
+    <strong>Public:</strong>
+    <%= recipe.public %>
+  </p>
+  </div>
   <p>
     <strong>Cooking time:</strong>
     <%= recipe.cooking_time %>
@@ -15,8 +18,5 @@
     <strong>Description:</strong>
     <%= recipe.description %>
   </p>
-  <p>
-    <strong>Public:</strong>
-    <%= recipe.public %>
-  </p>
+ 
 </div>
