@@ -13,8 +13,9 @@ Rails.application.routes.draw do
   get 'pages/home'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
+  resources :food, only: %i[index new show create destroy] 
+  
   resources :pages, only: %i[home] do
-    resources :food, only: %i[index new create destroy] 
   end
 
   # Defines the root path route ("/")

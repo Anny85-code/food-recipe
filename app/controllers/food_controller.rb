@@ -1,4 +1,5 @@
 class FoodController < ApplicationController
+  before_action :authenticate_user!, only: %i[new create destroy]
   def index
     @foods = Food.all
   end
@@ -13,10 +14,11 @@ def new
 
   def create
     @food = Food.new(food_params)
+    @food.user_id = current_user.id
 
     respond_to do |format|
       if @food.save
-        format.html { redirect_to page_food_index_path(id: @food.page_id) }
+        format.html { redirect_to food_index_path(id: @food.user_id) }
         flash[:notice] = 'You have successfully created food.'
       else
         format.html { render :new, alert: 'An error has occurred while creating food' }
@@ -26,10 +28,10 @@ def new
 
 
   def destroy
-    @post = Food.find(params[:id])
-    # user = User.find(@food.user_id)
+    @food = Food.find(params[:id])
+    user = User.find(@food.user_id)
     @food.destroy if @food.present?
-    food.save
+    user.save
     respond_to do |format|
       format.html { redirect_to user_path(id: @food.user_id), notice: 'food was removed.' }
     end
