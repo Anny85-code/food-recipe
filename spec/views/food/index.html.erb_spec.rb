@@ -7,7 +7,7 @@ RSpec.feature 'food/index.html.erb', type: :system do
       @food1 = Food.create(name: 'Ekpang', measuring_unit: 6, price: 7)
       @food2 = Food.create(name: 'Edesi', measuring_unit: 5, price: 15)
       @food3 = Food.create(name: 'Edikang ikong', measuring_unit: 15, price: 25)
-      
+
       visit user_session_path
 
       within 'form' do

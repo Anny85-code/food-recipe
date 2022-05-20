@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   get 'inventory/index'
 
   resources :recipes
-  get 'recipes/:id', to: 'public_recipes#show', as: 'public_recipe_show'
 
   devise_for :users, :controllers => { registrations: 'users/registrations', sessions: 'users/sessions' }
 

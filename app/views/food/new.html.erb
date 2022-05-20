@@ -1,32 +1,22 @@
-<div class="slider_area ">
-        <div class="single_slider  d-flex align-items-center slider_bg_1 ">
-            <div class="container-fluid">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-xl-8 ">
-                        <div class="slider_text text-center">
-                            <div class="text">
-                                <h3>
-                                    Chicken dish with per boiled egg 
-                                </h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
+ <% content_for :header do %>
+  <%= render partial: "/layouts/header" %>
+<% end%>
+<% content_for :page_title do %>
+  Add food
+<% end %>
+<% content_for :content do %>
+  <section class="container-fluid pt-5 m-5">
+    <div class="container">
+      <h1>Add new food</h1>
+      <%= form_with model: @food, url: food_index_path, class: "left" do |form| %>
+        <%= form.label :Name %> <br>
+        <%= form.text_field :name, class: 'form-control' %> <br>
+        <%= form.label :Measuring_Unit %> <br>
+        <%= form.text_field :measuring_unit, class: 'form-control' %> <br>
+        <%= form.label :Price %> <br>
+        <%= form.text_field :price, class: 'form-control' %> <br>
+        <%= form.submit "Submit", class: "btn btn-info btn-lg" %>
+      <% end %>
     </div>
-
-<section class="container-fluid pt-5 m-5">
-  <div class="container">
-    <h1>Add new food</h1>
-    <%= form_with model: @food, url: food_index_path, class: "left" do |form| %>
-      <%= form.label :Name %> <br>
-      <%= form.text_field :name, class: 'form-control' %> <br>
-      <%= form.label :Measuring_Unit %> <br>
-      <%= form.text_field :measuring_unit, class: 'form-control' %> <br>
-      <%= form.label :Price %> <br>
-      <%= form.text_field :price, class: 'form-control' %> <br>
-      <%= form.submit "Submit", class: "btn btn-info btn-lg" %>
-    <% end %>
-  </div>
-</section>
+  </section>
+<%end%>
