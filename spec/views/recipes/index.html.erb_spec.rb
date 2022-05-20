@@ -2,22 +2,10 @@ require 'rails_helper'
 
 RSpec.describe 'recipes/index', type: :view do
   before(:each) do
-    assign(:recipes, [
-             Recipe.create!(
-               name: 'Name',
-               preparation_time: 'Preparation Time',
-               cooking_time: 'Cooking Time',
-               description: 'MyText',
-               public: false
-             ),
-             Recipe.create!(
-               name: 'Name',
-               preparation_time: 'Preparation Time',
-               cooking_time: 'Cooking Time',
-               description: 'MyText',
-               public: false
-             )
-           ])
+    ally = User.create(name: 'Ally', email: 'ally@recipe.com', password: '11111111')
+    recipe_1 = Recipe.create!(name: 'Cook1', preparation_time: '10min', cooking_time: '20min', description: 'MyText', public: false, user: ally)
+    recipe_2 = Recipe.create!(name: 'Cook1', preparation_time: '10min', cooking_time: '20min', description: 'MyText', public: false, user: ally)
+    assign(:recipes, [recipe_1, recipe_2])
   end
 
   it 'renders a list of recipes' do
