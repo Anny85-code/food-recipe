@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature 'food/index.html.erb', type: :view do
+RSpec.feature 'food/index.html.erb', type: :system do
   describe 'food#index' do
     before(:each) do
       Food.destroy_all
