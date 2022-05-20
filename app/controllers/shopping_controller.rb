@@ -1,5 +1,4 @@
 class ShoppingController < ApplicationController
-  layout 'application_content'
 
   before_action :authenticate_user!, only: %i[index]
 

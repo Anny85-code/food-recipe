@@ -1,6 +1,9 @@
 <% content_for :page_title do %>
   Shopping List
 <% end %>
+<% content_for :header do %>
+  <%= render partial: "/layouts/header" %>
+<% end%>
 <% content_for :content do %>
   <div class="blog_area section-padding">
     <div class="container">
@@ -38,3 +41,6 @@
     </div>
   </div>
 <% end %>
+<% content_for :sections do %>
+  <%= render partial: "/layouts/sections" %>
+<% end%>
