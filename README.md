@@ -1,14 +1,16 @@
-# Blog App
+# Food Recipe App
 
->
+## Description
 
+> The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app should allow you to make them public so anyone can access them.
+
+
+## Screenshot
+![screencapture-localhost-3000-2022-05-20-15_19_30](https://user-images.githubusercontent.com/87186552/169548492-4a41c85f-da93-47f5-b96c-541cc30187ca.png)
 ## Built With
 
 - Ruby on Rails
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
+- Postgres
 
 ## Getting Started
 
@@ -55,6 +57,7 @@ Visit http://localhost:3000/ in your browser.
 
 ```
 rspec spec/models
+rspec spec/views
 ```
 
 ## Authors
@@ -81,9 +84,10 @@ Feel free to check the [issues page](../../issues/).
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-
-- Hat tip to anyone whose code was used
+- [] Template by [Colorlib](https://colorlib.com/)
+- Microverse
 - Inspiration
+- Colorlib
 - etc
 
 ## 📝 License
