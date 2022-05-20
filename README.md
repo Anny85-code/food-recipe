@@ -12,10 +12,6 @@
 - Ruby on Rails
 - Postgres
 
-## Live Demo (nil)
-
-[Live Demo Link](https://livedemo.com)
-
 ## Getting Started
 
 ### Get a local copy
@@ -61,6 +57,7 @@ Visit http://localhost:3000/ in your browser.
 
 ```
 rspec spec/models
+rspec spec/views
 ```
 
 ## Authors
@@ -87,7 +84,7 @@ Feel free to check the [issues page](../../issues/).
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-- [] Template by Colorlib
+- [] Template by [Colorlib](https://colorlib.com/)
 - Microverse
 - Inspiration
 - Colorlib
