@@ -1,5 +1,5 @@
 class PublicRecipesController < ApplicationController
-  layout 'application2'
+  layout 'application_content'
 
   def index
     @recipes = Recipe.includes(:recipe_foods).where(public: true).order(id: 'DESC')
