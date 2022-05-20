@@ -8,7 +8,7 @@
             <img src="/img/recepie/recpie_1.png" alt="">
           </div>
           <h2 class="mb-3"><%= link_to "Show this recipe", recipe %></h2>
-          <a href="#" class="line_btn"><%= button_to "Destroy this recipe", @recipe, method: :delete, class:"btn btn-warning btn-lg" %></a>
+          <a href="#" class="line_btn"><%= button_to "Destroy this recipe", recipe_path(recipe), method: :delete, class:"btn btn-warning btn-lg" %></a>
         </div>
         <div class="d-flex p-5">
           <h3> <%= recipe.description %></h3>
