@@ -19,7 +19,7 @@
 - git clone the project
 
 ```bash
-git clone https://github.com/jaflih/recipe_app.git
+git clone https://github.com/Anny85-code/food-recipe.git
 ```
 
 ```
