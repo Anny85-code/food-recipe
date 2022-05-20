@@ -1,0 +1,46 @@
+<% content_for :page_title do %>
+  Shopping List
+<% end %>
+<% content_for :header do %>
+  <%= render partial: "/layouts/header" %>
+<% end%>
+<% content_for :content do %>
+  <div class="blog_area section-padding">
+    <div class="container">
+      <br/>
+      <div class="row">
+        <h3 class="text-heading">Shopping List</h3>
+      </div>
+      <div class="row">
+        <h6>total <%= @total %></h6>
+      </div>
+      <div class="row">
+        <div class="progress-table-wrap">
+          <div class="progress-table">
+            <div class="table-head">
+              <div class="serial">#</div>
+              <div class="percentage">Food</div>
+              <div class="percentage">Quantity</div>
+              <div class="percentage">Price</div>
+            </div>
+            <div>
+              <div>
+                <% @shop.each do |s| %>
+                  <div class="table-row">
+                    <div class="serial"></div>
+                    <div class="percentage"><%= s[:food].name %></div>
+                    <div class="percentage"><%=  s[:food].price%></div>
+                    <div class="percentage"><%= s[:price] %>$</div>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+<% content_for :sections do %>
+  <%= render partial: "/layouts/sections" %>
+<% end%>

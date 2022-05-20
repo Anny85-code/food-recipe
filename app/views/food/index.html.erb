@@ -1,0 +1,19 @@
+<% content_for :page_title do %>
+  Foods
+<% end %>
+<% content_for :header do %>
+  <%= render partial: "/layouts/header" %>
+<% end%>
+<% content_for :content do %>
+  <div class="recepie_area">
+    <div class="p-5  d-flex align-items-center justify-content-center">
+      <button type="button" class="btn btn-secondary btn-lg btn-block"><%= link_to "Add food", new_food_path %></button></div>
+    <div class="container-fluid m-2">
+      <div class="row">
+        <% @foods.each do |f| %>
+          <%= render partial: "food", locals: { food: f} %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<%end%>

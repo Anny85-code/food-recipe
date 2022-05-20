@@ -1,0 +1,22 @@
+<% content_for :page_title do %>
+  Add food
+<% end %>
+<% content_for :header do %>
+  <%= render partial: "/layouts/header" %>
+<% end%>
+<% content_for :content do %>
+  <section class="container-fluid pt-5 m-5">
+    <div class="container">
+      <h1>Add new food</h1>
+      <%= form_with model: @food, url: food_index_path, class: "left" do |form| %>
+        <%= form.label :Name %> <br>
+        <%= form.text_field :name, class: 'form-control' %> <br>
+        <%= form.label :Measuring_Unit %> <br>
+        <%= form.text_field :measuring_unit, class: 'form-control' %> <br>
+        <%= form.label :Price %> <br>
+        <%= form.text_field :price, class: 'form-control' %> <br>
+        <%= form.submit "Submit", class: "btn btn-info btn-lg" %>
+      <% end %>
+    </div>
+  </section>
+<%end%>
