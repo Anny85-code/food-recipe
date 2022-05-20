@@ -1,30 +1,19 @@
-<div id="<%= dom_id recipe %>">
-  <h3>
-    <strong>Name:</strong>
-    <%= recipe.name %>
-  </h3>
-  <div class="d-flex justify-content-between p-5">
-    <h3>
-      <strong>Preparation time:</strong>
-      <%= recipe.preparation_time %>
-    </h3>
-    <h3>
-      <strong>Public:</strong>
-      <%= recipe.public %>
-      <label class="switch">
-        <input type="checkbox" checked>
-        <span class="slider round"></span>
-      </label>
-    </h3>
-  </div>
-  <div class="text-left ml-5">
-    <h3>
-      <strong>Cooking time:</strong>
-      <%= recipe.cooking_time %>
-    </h3>
-    <h3>
-      <strong>Description:</strong>
-      <%= recipe.description %>
-    </h3>
+<div class="recepie_area plus_padding">
+  <div class="container">
+    <div class="single_recepie text-center">
+      <div class="d-flex justify-content-between container-fluid">
+        <div class="d-flex flex-column">
+          <h1><%= recipe.name %></h1>
+          <div class="recepie_thumb mb-3">
+            <img src="/img/recepie/recpie_1.png" alt="">
+          </div>
+          <h2 class="mb-3"><%= link_to "Show this recipe", recipe %></h2>
+          <a href="#" class="line_btn"><%= button_to "Destroy this recipe", @recipe, method: :delete, class:"btn btn-warning btn-lg" %></a>
+        </div>
+        <div class="d-flex p-5">
+          <h3> <%= recipe.description %></h3>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,18 +1,17 @@
-<div class="container-fluid text-center p-5">
-  <p style="color: green"><%= notice %></p>
-  <h1>Recipes</h1>
-  <div id="recipes">
-    <% @recipes.each do |recipe| %>
-      <%= render recipe %>
-      <div class="d-flex justify-content-between m-5">
-        <%= link_to "Show this recipe", recipe %>
-      <% end %>
-      <%= link_to "New recipe", new_recipe_path %></>
-  </div>
-  <div class="d-flex justify-content-between m-5">
-    <button type="button" class="btn btn-primary">Generate shopping list</button>
-    <button type="button" class="btn btn-secondary">Add Ingredient</button>
+<div class="bradcam_area bradcam_bg_1">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="bradcam_text text-center">
+          <h3>Recipes</h3>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-<hr>
+<p style="color: green"><%= notice %></p>
+<div id="recipes">
+  <% @recipes.each do |recipe| %>
+    <%= render recipe %>
+  <% end %>
 </div>
