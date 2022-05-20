@@ -75,7 +75,7 @@
             <h3><%= f.name %></h3>
             <span>Appetizer</span>
             <p>Time Needs: 30 Mins</p>
-            <a href="#" class="line_btn">View Full Recipe</a>
+            <%= link_to 'View Full Recipe', recipe_path(f), class: "line_btn" %>
           </div>
         </div>
       <% end %>
