@@ -1,4 +1,4 @@
-<% content_for :header do %>
+<% content_for :content do %>
   <header>
     <div class="header-area ">
       <div id="sticky-header" class="main-header-area ">
@@ -7,7 +7,7 @@
             <div class="col-xl-3 col-lg-2">
               <div class="logo">
                 <a href="index.html">
-                  <img src="/img/logo.png" alt="">
+                  <img src="img/logo.png" alt="">
                 </a>
               </div>
             </div>
@@ -33,11 +33,10 @@
       </div>
     </div>
   </header>
-  <!-- header-end -->
   <!-- slider_area_start -->
-  <div class="slider_area">
-    <div class="single_slider  d-flex align-items-center slider_bg_1">
-      <div class="container">
+  <div class="slider_area ">
+    <div class="single_slider  d-flex align-items-center slider_bg_1 ">
+      <div class="container-fluid">
         <div class="row align-items-center justify-content-center">
           <div class="col-xl-8 ">
             <div class="slider_text text-center">
@@ -49,8 +48,87 @@
             </div>
           </div>
         </div>
+        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+          <div class="search_icon">
+            <a href="#">
+              <i class="ti-search"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="mobile_menu d-block d-lg-none">
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <!-- slider_area_end -->
+</div>
+<div class="recepie_area">
+  <div class="container-fluid">
+    <div class="row">
+      <% @foods.each do |f| %>
+        <div class="col-xl-4 col-lg-4 col-md-6">
+          <div class="single_recepie text-center">
+            <div class="recepie_thumb">
+              <img src="/img/recepie/recpie_3.png" alt="">
+            </div>
+            <h3><%= f.name %></h3>
+            <span>Appetizer</span>
+            <p>Time Needs: 30 Mins</p>
+            <a href="#" class="line_btn">View Full Recipe</a>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="recepie_videoes_area">
+  <div class="container-fluid ml-3">
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6">
+        <div class="recepie_info">
+          <h3>Recipe videos 
+            that never misses 
+            any portion</h3>
+          <p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women.</p>
+          <div class="video_watch d-flex align-items-center">
+            <a class="popup-video" href="https://www.youtube.com/watch?v=lr6AMBsjxrY"> <i class="ti-control-play"></i> </a>
+            <div class="watch_text" >
+              <h4>Watch Video</h4>
+              <p>You will love our execution</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="videos_thumb">
+          <div class="big_img">
+            <img src="img/video/big.png" alt="">
+          </div>
+          <div class="small_thumb">
+            <img src="img/video/small_1.png" alt="">
+          </div>
+          <div class="small_thumb_2">
+            <img src="img/video/2.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="latest_trand_area mb-5">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="trand_info text-center">
+          <p>Thousands of recipes are waiting to be watched</p>
+          <h3>Discover latest trending recipes</h3>
+          <a href="#" class="boxed-btn3">View all Recipes</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- slider_area_end -->
+<!-- footer  -->
 <%end%>
