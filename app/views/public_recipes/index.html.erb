@@ -7,7 +7,7 @@
 <% content_for :content do %>
   <!-- recepie_area_start  -->
   <div class="recepie_area plus_padding">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <% @recipes.each do |recipe| %>
           <%= render partial: "recipe", locals: { recipe: recipe} %>

@@ -84,7 +84,7 @@ Feel free to check the [issues page](../../issues/).
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-- [] Template by [Colorlib](https://colorlib.com/)
+- [x] Template by [Colorlib](https://colorlib.com/)
 - Microverse
 - Inspiration
 - Colorlib
