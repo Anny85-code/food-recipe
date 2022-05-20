@@ -8,6 +8,6 @@ class Recipe < ApplicationRecord
       p recipe_food.food
       total += recipe_food.quantity * recipe_food.food.price
     end
-    total
+    total / 1000
   end
 end
