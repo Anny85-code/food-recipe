@@ -1,5 +1,6 @@
 class FoodController < ApplicationController
   before_action :authenticate_user!, only: %i[index new create destroy]
+  load_and_authorize_resource
 
   def index
     @foods = Food.where(user: current_user)
@@ -29,6 +30,7 @@ class FoodController < ApplicationController
 
   def destroy
     @food = Food.find(params[:id])
+
     @food.destroy if @food.present?
     respond_to do |format|
       format.html { redirect_to foods_path, notice: 'food was removed.' }

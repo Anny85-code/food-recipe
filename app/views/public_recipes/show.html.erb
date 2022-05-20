@@ -1,5 +1,8 @@
-  <% content_for :page_title do %>
+<% content_for :page_title do %>
   <%= @recipe.name %>
+<% end %>
+<% content_for :header do %>
+  <%= render partial: "/layouts/header" %>
 <% end %>
 <% content_for :content do %>
   <div class="recepie_details_area">
@@ -13,29 +16,38 @@
         <div class="col-xl-6 col-md-6">
           <div class="recepies_info">
             <h3><%= @recipe.name %></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            <% if @recipe.public %>
+              <div class="confirm-switch">
+                <input type="checkbox" id="confirm-switch" checked=""  disabled>
+                <label for="confirm-switch"></label>
+              </div>
+            <%end%>
+            <p><%= @recipe.description%></p>
             <div class="resepies_details">
               <ul>
                 <li>
-                  <p><strong>Rating</strong> : <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> </p>
+                  <p><strong style="width: 130px;" >Rating</strong> : <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> </p>
                 </li>
                 <li>
-                  <p><strong>Preparation time</strong> : <%= @recipe.preparation_time %> </p>
+                  <p><strong style="width: 130px;">Preparation time</strong> : <%= @recipe.preparation_time %> </p>
                 </li>
                 <li>
-                  <p><strong>Cooking time</strong> : <%= @recipe.cooking_time %> </p>
+                  <p><strong style="width: 130px;">Cooking time</strong> : <%= @recipe.cooking_time %> </p>
                 </li>
                 <li>
-                  <p><strong>Tags</strong> :  Dinner, Main, Chicken, Dragon, Phoenix </p>
+                  <p><strong style="width: 130px;">Tags</strong> :  Dinner, Main, Chicken, Dragon, Phoenix </p>
                 </li>
                 <li>
                   <p>
-                    <%= link_to 'Generate shopping list', shop_path+'?id='+@recipe.id.to_s %>
+                    <%= link_to shop_path do %>
+                      <span class="genric-btn default circle arrow" style="width: 42%;margin: 10px;"> Generate shopping list</span>
+                    <% end %>
                   </p>
                 </li>
                 <% if can? :manage, @recipe %>
                   <li>
-                    <p><button>Add ingredient</button></p>
+                    <p>
+                      <span class="genric-btn default circle arrow" style="width: 42%;margin: 10px;"> Add ingredient</span></p>
                   </li>
                 <% end %>
               </ul>
@@ -61,9 +73,9 @@
           <h3 class="text-heading">List of ingredient </h3>
           <div class="progress-table">
             <div class="table-head">
-              <div class="serial">#</div>
-              <div class="country">Food</div>
-              <div class="visit">Quantity</div>
+              <div class="serial"></div>
+              <div class="percentage">Food</div>
+              <div class="percentage">Quantity</div>
               <div class="percentage">Value</div>
               <div class="percentage"></div>
               <div class="percentage"></div>
@@ -71,9 +83,9 @@
             <% @recipe.recipe_foods.each do |recipe_food| %>
               <div class="table-row">
                 <div class="serial"></div>
-                <div class="country"><%= recipe_food.food.name %></div>
-                <div class="visit"><%= recipe_food.quantity %></div>
-                <div class="percentage"><%= recipe_food.food.price %>$</div>
+                <div class="percentage"><%= recipe_food.food.name %></div>
+                <div class="percentage"><%= recipe_food.quantity %></div>
+                <div class="percentage">$ <%= recipe_food.food.price %></div>
                 <div class="percentage"><a href="#" class="genric-btn success">Modify</a></div>
                 <div class="percentage"><a href="#" class="genric-btn danger-border">Remove</a></div>
               </div>

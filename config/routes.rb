@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  
+  root "pages#home"
   get 'shopping', to: 'shopping#index', as: 'shop'
   get 'public_recipes', to: 'public_recipes#index', as: 'public_recipes'
  
@@ -6,16 +8,8 @@ Rails.application.routes.draw do
   get 'inventory/index'
 
   resources :recipes
-  get 'recipes/:id', to: 'public_recipes#show', as: 'public_recipe_show'
 
   devise_for :users, :controllers => { registrations: 'users/registrations', sessions: 'users/sessions' }
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
-
-  get 'pages/home'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   get 'foods', to: 'food#index', as: 'foods'
 
@@ -25,5 +19,4 @@ Rails.application.routes.draw do
   end
 
   # Defines the root path route ("/")
-  root "pages#home"
 end

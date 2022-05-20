@@ -7,6 +7,6 @@
     <span>By: <%= recipe.user.name %></span>
     <span>Total food items:  <%= recipe.recipe_foods.length %></span>
     <span>Total price: <%= recipe.total_price %> </span>
-    <%= link_to 'View Full Recipe', public_recipe_show_path(recipe), class: "line_btn" %>
+    <%= link_to 'View Full Recipe', recipe_path(recipe), class: "line_btn" %>
   </div>
 </div>

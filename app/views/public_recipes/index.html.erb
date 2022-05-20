@@ -1,21 +1,19 @@
-  <% content_for :page_title do %>
+<% content_for :page_title do %>
   Public recipes
-  <% end %>
-
+<% end %>
+<% content_for :header do %>
+  <%= render partial: "/layouts/header" %>
+<% end %>
 <% content_for :content do %>
-
- <!-- recepie_area_start  -->
-    <div class="recepie_area plus_padding">
-      <div class="container">
-        <div class="row">
-          <% @recipes.each do |recipe| %>
-              <%= render partial: "recipe", locals: { recipe: recipe} %>
-          <% end %>
-        </div>
+  <!-- recepie_area_start  -->
+  <div class="recepie_area plus_padding">
+    <div class="container">
+      <div class="row">
+        <% @recipes.each do |recipe| %>
+          <%= render partial: "recipe", locals: { recipe: recipe} %>
+        <% end %>
       </div>
     </div>
-    <!-- /recepie_area_start  -->
-
+  </div>
+  <!-- /recepie_area_start  -->
 <% end %>
-
-    

@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
+  def error; end
+
   def home
-    @foods = Food.where(user: current_user)
+    @foods = Recipe.includes(:recipe_foods).where(public: true).order(id: 'DESC')
   end
 end

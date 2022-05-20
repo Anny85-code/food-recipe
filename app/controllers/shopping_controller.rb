@@ -1,19 +1,19 @@
 class ShoppingController < ApplicationController
-  layout 'application2'
-
   before_action :authenticate_user!, only: %i[index]
 
   def index
-    inventory = current_user.inventories.first
-    recipe = Recipe.find(params[:id])
     @shop = []
     @total = 0
-    recipe.recipe_foods.each do |rf|
-      infood = InventoryFood.where(inventory:, food: rf.food).first
-      if infood.quantity < rf.quantity
-        @shop << { food: rf.food, price: rf.quantity * rf.food.price }
-        @total += rf.quantity * rf.food.price
-      end
+
+    results = Food.joins(:recipe_foods).select(:foods, 'foods.*',
+                                               'sum(recipe_foods.quantity) as rf_q').joins(:inventory_foods).select('inventory_foods.quantity as if_q').group('foods.id, inventory_foods.quantity')
+
+    results.each do |result|
+      next unless result.rf_q > result.if_q
+
+      quantity = result.rf_q - result.if_q
+      @shop << { food: result, quantity:, price: quantity * result.price }
+      @total += quantity * result.price
     end
   end
 end

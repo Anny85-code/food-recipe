@@ -1,22 +1,16 @@
 require 'rails_helper'
 
-RSpec.describe 'recipes/show', type: :view do
+RSpec.describe 'recipes/show', type: :system do
   before(:each) do
-    @recipe = assign(:recipe, Recipe.create!(
-                                name: 'Name',
-                                preparation_time: 'Preparation Time',
-                                cooking_time: 'Cooking Time',
-                                description: 'MyText',
-                                public: false
-                              ))
+    ally = User.create(name: 'Ally', email: 'ally@recipe.com', password: '11111111')
+    @recipe1 = Recipe.create!(name: 'Cook1', preparation_time: '10min', cooking_time: '20min', description: 'MyText', public: true, user: ally)
   end
 
-  it 'renders attributes in <p>' do
-    render
-    expect(rendered).to match(/Name/)
-    expect(rendered).to match(/Preparation Time/)
-    expect(rendered).to match(/Cooking Time/)
-    expect(rendered).to match(/MyText/)
-    expect(rendered).to match(/false/)
+  it 'I can see the Recipe details' do
+    visit recipe_path(@recipe1.id)
+    expect(page).to have_content 'Cook1'
+    expect(page).to have_content '10min'
+    expect(page).to have_content '20min'
+    expect(page).to have_content 'MyText'
   end
 end
