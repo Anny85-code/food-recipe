@@ -1,10 +1,20 @@
+<div class="bradcam_area bradcam_bg_1">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>Recipes</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 <p style="color: green"><%= notice %></p>
-<h1>Recipes</h1>
 <div id="recipes">
   <% @recipes.each do |recipe| %>
     <%= render recipe %>
     <p>
-      <%= link_to "Show this recipe", recipe %>
+     
     </p>
   <% end %>
 </div>
