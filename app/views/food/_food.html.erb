@@ -1,12 +1,11 @@
-
-    <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_recepie text-center ml-3">
-                        <div class="recepie_thumb">
-                            <img src="img/recepie/recpie_2.png" alt="">
-                        </div>
-                        <h3><%= food.name %></h3>
-                        <h2>Measurement Unit:<%= food.measuring_unit %></h2>
-                        <h2>Unit Price: <%= food.price %></h2>
-                        <a href="#" class="line_btn"><%= button_to "Delete", food,class:"btn btn-warning btn-lg", method: :delete %></a>
-                    </div>
-                </div>
+<div class="col-xl-4 col-lg-4 col-md-6">
+  <div class="single_recepie text-center ml-3">
+    <div class="recepie_thumb">
+      <img src="img/recepie/recpie_2.png" alt="">
+    </div>
+    <h3><%= food.name %></h3>
+    <h2>Measurement Unit:<%= food.measuring_unit %></h2>
+    <h2>Unit Price: <%= food.price %></h2>
+    <a href="#" class="line_btn"><%= button_to "Delete", food,class:"btn btn-warning btn-lg", method: :delete %></a>
+  </div>
+</div>
