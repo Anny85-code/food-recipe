@@ -22,7 +22,7 @@
 - git clone the project
 
 ```bash
-git clone https://github.com/jaflih/recipe_app.git
+git clone https://github.com/Anny85-code/food-recipe.git
 ```
 
 ```
@@ -87,7 +87,7 @@ Feel free to check the [issues page](../../issues/).
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-- [] Template by [Colorlib](https://colorlib.com/)
+- [x] Template by [Colorlib](https://colorlib.com/)
 - Microverse
 - Inspiration
 - Colorlib
